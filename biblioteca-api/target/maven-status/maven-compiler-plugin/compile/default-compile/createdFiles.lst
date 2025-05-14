@@ -1,0 +1,13 @@
+com/ejemplo/biblioteca/service/LibroService.class
+com/ejemplo/biblioteca/controller/PrestamoController.class
+com/ejemplo/biblioteca/repository/PrestamoRepository.class
+com/ejemplo/biblioteca/controller/LibroController.class
+com/ejemplo/biblioteca/BibliotecaApiApplication.class
+com/ejemplo/biblioteca/repository/PersonaRepository.class
+com/ejemplo/biblioteca/model/Libro.class
+com/ejemplo/biblioteca/service/PersonaService.class
+com/ejemplo/biblioteca/repository/LibroRepository.class
+com/ejemplo/biblioteca/controller/PersonaController.class
+com/ejemplo/biblioteca/model/Prestamo.class
+com/ejemplo/biblioteca/service/PrestamoService.class
+com/ejemplo/biblioteca/model/Persona.class

@@ -1,0 +1,13 @@
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/BibliotecaApiApplication.java
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/controller/LibroController.java
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/controller/PersonaController.java
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/controller/PrestamoController.java
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/model/Libro.java
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/model/Persona.java
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/model/Prestamo.java
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/repository/LibroRepository.java
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/repository/PersonaRepository.java
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/repository/PrestamoRepository.java
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/service/LibroService.java
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/service/PersonaService.java
+/home/fernando/Escritorio/Api_biblioteca/biblioteca-api/src/main/java/com/ejemplo/biblioteca/service/PrestamoService.java
