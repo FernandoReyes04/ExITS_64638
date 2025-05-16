@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
+		"name": "Biblioteca API",
+		"description": "Colección de Postman para probar los endpoints de la API de Biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Libros",
+			"description": "Operaciones relacionadas con libros",
+			"item": [
+				{
+					"name": "Obtener todos los libros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/libros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"libros"
+							]
+						},
+						"description": "Obtiene la lista de todos los libros disponibles en la biblioteca"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener libro por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/libros/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"libros",
+								"1"
+							]
+						},
+						"description": "Obtiene un libro específico por su ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nuevo libro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"titulo\": \"Don Quijote de la Mancha\",\n  \"autor\": \"Miguel de Cervantes\",\n  \"disponible\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/libros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"libros"
+							]
+						},
+						"description": "Crea un nuevo libro en la biblioteca"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar libro",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"titulo\": \"Don Quijote de la Mancha (Edición Actualizada)\",\n  \"autor\": \"Miguel de Cervantes\",\n  \"disponible\": false\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/libros/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"libros",
+								"1"
+							]
+						},
+						"description": "Actualiza la información de un libro existente"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar libro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/libros/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"libros",
+								"1"
+							]
+						},
+						"description": "Elimina un libro de la biblioteca"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Personas",
+			"description": "Operaciones relacionadas con personas",
+			"item": [
+				{
+					"name": "Obtener todas las personas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personas"
+							]
+						},
+						"description": "Obtiene la lista de todas las personas registradas en la biblioteca"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener persona por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/personas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personas",
+								"1"
+							]
+						},
+						"description": "Obtiene una persona específica por su ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nueva persona",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Juan Pérez\",\n  \"correo\": \"juan.perez@ejemplo.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personas"
+							]
+						},
+						"description": "Registra una nueva persona en la biblioteca"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar persona",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Juan Pérez González\",\n  \"correo\": \"juan.perez.gonzalez@ejemplo.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/personas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personas",
+								"1"
+							]
+						},
+						"description": "Actualiza la información de una persona existente"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar persona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/personas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personas",
+								"1"
+							]
+						},
+						"description": "Elimina una persona de la biblioteca"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener préstamos de una persona",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/personas/1/prestamos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personas",
+								"1",
+								"prestamos"
+							]
+						},
+						"description": "Obtiene la lista de préstamos realizados por una persona específica"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Préstamos",
+			"description": "Operaciones relacionadas con préstamos",
+			"item": [
+				{
+					"name": "Obtener todos los préstamos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/prestamos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"prestamos"
+							]
+						},
+						"description": "Obtiene la lista de todos los préstamos realizados en la biblioteca"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nuevos préstamos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"personaId\": 1,\n  \"librosIds\": [1, 2, 3]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/prestamos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"prestamos"
+							]
+						},
+						"description": "Registra nuevos préstamos de libros a una persona"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar préstamo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/prestamos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"prestamos",
+								"1"
+							]
+						},
+						"description": "Elimina un préstamo y marca el libro como disponible nuevamente"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
