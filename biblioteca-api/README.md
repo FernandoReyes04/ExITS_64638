@@ -36,8 +36,9 @@ El proyecto está organizado de la siguiente manera:
 
 ## Requisitos
 
-- Java 11 o superior
+- Java 17 o superior
 - Maven
+- MariaDB
 
 ## Cómo Ejecutar el Proyecto
 
@@ -49,6 +50,10 @@ El proyecto está organizado de la siguiente manera:
 mvn spring-boot:run
 ```
 
+## Cómo Probar la API
+
+Para instrucciones detalladas sobre cómo probar los endpoints de la API utilizando curl en la terminal y Postman, consulta el archivo [API_TESTING.md](API_TESTING.md).
+
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Si deseas contribuir, por favor abre un issue o envía un pull request.
@@ -56,3 +61,14 @@ Las contribuciones son bienvenidas. Si deseas contribuir, por favor abre un issu
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT.
+
+## Cambios Realizados
+
+Se han realizado los siguientes cambios para hacer funcional el proyecto:
+
+1. Actualización de la versión de Spring Boot de 3.4.5 (que no existe) a 3.2.0 (versión estable).
+2. Reemplazo de la dependencia javax.persistence-api por jakarta.persistence-api para compatibilidad con Spring Boot 3.x.
+3. Actualización de las clases de modelo (Libro, Persona, Prestamo) para usar las importaciones de jakarta.persistence en lugar de javax.persistence.
+4. Actualización de la documentación para reflejar el requisito de Java 17 y la dependencia de MariaDB.
+
+Estos cambios permiten que el proyecto compile y se ejecute correctamente con las versiones actuales de Spring Boot y Java.

@@ -1,6 +1,6 @@
 package com.ejemplo.biblioteca.controller;
 
-import com.ejemplo.biblioteca.model.Libro;
+import com.ejemplo.biblioteca.dto.LibroDTO;
 import com.ejemplo.biblioteca.service.LibroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -9,32 +9,32 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/libros")
+@RequestMapping("/libros")
 public class LibroController {
 
     @Autowired
     private LibroService libroService;
 
     @GetMapping
-    public List<Libro> obtenerTodosLosLibros() {
+    public List<LibroDTO> obtenerTodosLosLibros() {
         return libroService.obtenerTodosLosLibros();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Libro> obtenerLibroPorId(@PathVariable Long id) {
+    public ResponseEntity<LibroDTO> obtenerLibroPorId(@PathVariable Long id) {
         return libroService.obtenerLibroPorId(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public Libro crearLibro(@RequestBody Libro libro) {
-        return libroService.crearLibro(libro);
+    public LibroDTO crearLibro(@RequestBody LibroDTO libroDTO) {
+        return libroService.crearLibro(libroDTO);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Libro> actualizarLibro(@PathVariable Long id, @RequestBody Libro libro) {
-        Libro libroActualizado = libroService.actualizarLibro(id, libro);
+    public ResponseEntity<LibroDTO> actualizarLibro(@PathVariable Long id, @RequestBody LibroDTO libroDTO) {
+        LibroDTO libroActualizado = libroService.actualizarLibro(id, libroDTO);
         if (libroActualizado != null) {
             return ResponseEntity.ok(libroActualizado);
         } else {

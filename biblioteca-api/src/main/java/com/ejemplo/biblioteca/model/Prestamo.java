@@ -1,6 +1,6 @@
 package com.ejemplo.biblioteca.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -27,6 +27,15 @@ public class Prestamo {
     }
 
     public Prestamo(Libro libro, Persona persona, Date fechaPrestamo) {
+        if (libro == null) {
+            throw new IllegalArgumentException("El libro no puede ser nulo");
+        }
+        if (persona == null) {
+            throw new IllegalArgumentException("La persona no puede ser nula");
+        }
+        if (fechaPrestamo == null) {
+            throw new IllegalArgumentException("La fecha de préstamo no puede ser nula");
+        }
         this.libro = libro;
         this.persona = persona;
         this.fechaPrestamo = fechaPrestamo;

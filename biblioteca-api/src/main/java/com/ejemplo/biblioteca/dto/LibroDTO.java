@@ -1,27 +1,27 @@
-package com.ejemplo.biblioteca.model;
+package com.ejemplo.biblioteca.dto;
 
-import jakarta.persistence.*;
-
-@Entity
-public class Libro {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+/**
+ * Data Transfer Object for Libro entity
+ */
+public class LibroDTO {
     private Long id;
-
     private String titulo;
     private String autor;
     private boolean disponible;
 
-    public Libro() {}
+    // Default constructor
+    public LibroDTO() {
+    }
 
-    public Libro(Long id, String titulo, String autor, boolean disponible) {
+    // Constructor with all fields
+    public LibroDTO(Long id, String titulo, String autor, boolean disponible) {
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
         this.disponible = disponible;
     }
 
+    // Getters and Setters
     public Long getId() {
         return id;
     }

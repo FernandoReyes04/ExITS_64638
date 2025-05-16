@@ -1,21 +1,25 @@
-package com.ejemplo.biblioteca.model;
+package com.ejemplo.biblioteca.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Entity
-public class Persona {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+/**
+ * Data Transfer Object for Persona entity
+ */
+public class PersonaDTO {
     private Long id;
     private String nombre;
     private String correo;
 
-    // === Getters y Setters ===
+    // Default constructor
+    public PersonaDTO() {
+    }
 
+    // Constructor with all fields
+    public PersonaDTO(Long id, String nombre, String correo) {
+        this.id = id;
+        this.nombre = nombre;
+        this.correo = correo;
+    }
+
+    // Getters and Setters
     public Long getId() {
         return id;
     }
